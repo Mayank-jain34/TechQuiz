@@ -1,0 +1,69 @@
+===============================================
+								API List
+===============================================
+
+			API Name 			API Type						Params
+---------------- 	------------------	--------------
+login									Post								{username/password,email}
+SignUp								Post								{username,email,password}
+verifyUserName 				Get
+checkFormEmail				Get
+listOfQuiz						Get
+Search								Get
+AutoComplete					Get
+ListOfquestions				Get
+verifyAnswers					Post
+lastResults						Get
+
+
+=======================================================
+									Schema
+=======================================================
+1. USER INFO :
+			{
+				userName : String,
+				Email : String,
+				password : {
+					hash : String,
+					salt : String
+				}
+				AttendedQuestionSets : [
+					{
+						QuestionSet : ObjectId,
+						marks : number
+					}
+				]
+			}
+
+
+2. Category :
+			{
+				Name : String,
+				Type : String
+			}
+
+3. Levels :
+			{
+				Dificulity : String
+			}
+
+4. Questions :
+				{
+					Q : String,
+					Options :
+						[
+							{
+								Option : String,
+								isCorrectAnswer : boolean
+							}
+						]
+				}
+
+5. QuizSet :
+			{
+				Title : String,
+				Level : ObjectID,
+				QuestionList : [
+					ObjectId
+				]
+			}

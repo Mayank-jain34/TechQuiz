@@ -1,0 +1,24 @@
+<ion-view view-title="Login">
+  <ion-content>
+    <!--
+      <p style="font-size:25px;color:blue">A step towards better future</p>
+    -->
+    <div class="list">
+      <form name="loginform" novalidate="true">
+      <label class="item item-input">
+        <span class="input-label">Username</span>
+        <input type="text" ng-model = "user.userName">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Password</span>
+        <input type="password" ng-model = "user.password">
+      </label>
+      <div class="col col-80 col-offset-10">
+        <button class="button button-block button-positive" ng-disabled="loading" ng-click="login()">
+            LogIn
+        </button>
+        </form>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

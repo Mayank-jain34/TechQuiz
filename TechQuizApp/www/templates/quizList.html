@@ -1,0 +1,32 @@
+<ion-view view-title="Quiz List">
+  <ion-content>
+    <div class="item-input-inset">
+      <label class="item-input-wrapper">
+        <i class="icon ion-ios-search placeholder-icon"></i>
+        <input type="search" ng-model = "data.searchText" placeholder="Search">
+      </label>
+      <button style="color:gray" class="button button-clear">
+        Cancel
+      </button>
+    </div>
+<!---->
+    <div data-ng-repeat="quiz in data.quizList" class="card" style="margin-top:-10px;">
+      <div class="item item-divider">
+        {{quiz.title}}
+      </div>
+      <div class="item item-text-wrap">
+          <p><b>Number of Questions : </b>{{quiz.noOfQuestion}}
+          <p><b>Category : </b>{{quiz.category}}</p></p>
+          <p><b>Difficulty : </b>{{quiz.level.difficulty}}</p>
+        <div class="col col-80 col-offset-10">
+            <button class="button button-block  button-small button-positive" ng-click="takeQuiz(quiz._id)">
+              Take Quiz &nbsp;
+              <span class="ion-arrow-right-b">
+            </span></button>
+        </div>
+      </div>
+    </div>
+<!---->
+
+  </ion-content>
+</ion-view>

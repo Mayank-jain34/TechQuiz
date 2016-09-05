@@ -1,0 +1,22 @@
+<ion-view view-title="{{quizData.title || 'Quiz'}}">
+  <ion-content>
+    <div class="card">
+      <div class="item item-divider item-text-wrap">
+        Q. ({{question.currentQuestion+1}}/{{quizData.questionList.length}}) {{question.question.Q}}?
+      </div>
+      <div class="item item-text-wrap">
+        <ion-list ng-repeat = "option in question.question.Options">
+          <ion-radio ng-model="data.choice" ng-change="checkforanswer()" ng-value="{{$index}}"><label>{{$index+1}}. </label>{{option.Option}}</ion-radio>
+        </ion-list>
+      </div>
+      <div class="item item-divider">
+        <button ng-disabled="quizData.questionList.length ==question.currentQuestion+1" class="button button-block button-energized" ng-click="nextQuestion()">
+          Next
+        </button>
+        <button class="button button-block button-positive" ng-click="getResult()">
+            Submit
+        </button>
+      </div>
+  </div>
+  </ion-content>
+</ion-view>

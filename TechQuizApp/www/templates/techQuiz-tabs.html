@@ -1,0 +1,51 @@
+<!--<ion-tabs class="tabs-top tabs-icon-top tabs-color-assertive tabs-color-active-assertive">
+  <ion-tab title="Quizzes" icon-off="ion-ios-paper-outline" icon-on="ion-ios-paper" href="#/quiz/quizlist">
+    <ion-nav-view name="quiz-list"></ion-nav-view>
+  </ion-tab>
+  <ion-tab title="Results" icon-off="ion-ios-football-outline" icon-on="ion-ios-football" href="#/quiz/results">
+    <ion-nav-view name="quiz-results"></ion-nav-view>
+  </ion-tab>
+  <ion-tab title="About Us" icon-off="ion-information-circled" icon-on="ion-information-circled" href="#/quiz/about">
+    <ion-nav-view name="about"></ion-nav-view>
+  </ion-tab>
+</ion-tabs>
+-->
+
+    <ion-side-menus enable-menu-with-back-views="false">
+      <ion-side-menu-content>
+        <ion-nav-bar class="bar-assertive">
+          <ion-nav-back-button>
+          </ion-nav-back-button>
+
+          <ion-nav-buttons side="left">
+            <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+            </button>
+          </ion-nav-buttons>
+        </ion-nav-bar>
+
+        <!-- TABS -->
+        <ion-tabs class="tabs-top tabs-icon-top tabs-color-assertive tabs-color-active-assertive">
+          <ion-tab title="Quizzes" icon-off="ion-ios-paper-outline" icon-on="ion-ios-paper" href="#/quiz/quizlist">
+            <ion-nav-view name="quiz-list"></ion-nav-view>
+          </ion-tab>
+          <ion-tab title="Results" icon-off="ion-ios-football-outline" icon-on="ion-ios-football" href="#/quiz/results">
+            <ion-nav-view name="quiz-results"></ion-nav-view>
+          </ion-tab>
+          <ion-tab title="About Us" icon-off="ion-information-circled" icon-on="ion-information-circled" href="#/quiz/about">
+            <ion-nav-view name="about"></ion-nav-view>
+          </ion-tab>
+        </ion-tabs>
+      </ion-side-menu-content>
+
+       <!-- Side Menu (left) -->
+      <ion-side-menu side="left">
+        <ion-header-bar class="bar-assertive">
+          <h1 class="title">Side Menu</h1>
+        </ion-header-bar>
+        <ion-content>
+          <button ng-click="signOut()" class="button button-outline button-full button-positive">
+              Sign Out <span class="ion-log-out"></span>
+          </button>
+        </ion-content>
+      </ion-side-menu>
+    </ion-side-menus>

@@ -1,0 +1,12 @@
+<ion-view view-title="Results">
+  <ion-content>
+    <div class="list card">
+  <div ng-repeat="result in data.results" class="item item-icon-left">
+    <i class="icon ion-trophy"></i>
+    <p><b>{{result.quizSet.title}}</b></p>
+    <p><b>Marks you got :</b>
+  {{result.marks}}</p>
+  </div>
+</div>
+  </ion-content>
+</ion-view>

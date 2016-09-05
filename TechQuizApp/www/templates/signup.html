@@ -1,0 +1,23 @@
+<ion-view view-title="Sign up">
+  <ion-content>
+    <div class="list">
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">User Name</span>
+        <input type="text" ng-model="regForm.username" placeholder="User Name">
+      </label>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Email</span>
+        <input type="text" placeholder="Email" ng-model="regForm.email">
+      </label>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Password</span>
+        <input type="password" placeholder="Password" ng-model="regForm.password">
+      </label>
+    </div>
+    <div class="col col-80 col-offset-10">
+      <button class="button button-block button-positive" ng-click="signup()">
+          SignUp
+      </button>
+    </div>
+  </ion-content>
+</ion-view>
